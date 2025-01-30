@@ -1,7 +1,7 @@
 let selectedWord;
 let guessedLetters = [];
 let wrongLetters = [];
-let remainingAttempts = 3;
+let remainingAttempts = 10;
 
 function startGame() {
   const inputWordElement = document.getElementById('inputWord');
@@ -20,7 +20,7 @@ function startGame() {
 
   guessedLetters = [];
   wrongLetters = [];
-  remainingAttempts = 3;
+  remainingAttempts = 10;
 
 
   document.getElementById('message').textContent = "";
