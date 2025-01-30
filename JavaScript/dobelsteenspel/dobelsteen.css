@@ -1,0 +1,15 @@
+body{
+    text-align: center;
+    background-color:#d9edee;
+}
+
+.dice{
+    transition: transform 0.3s ease-in-out;
+    width: 100px;
+    height:100px;
+}
+
+.rolling {
+    transform: rotate(720deg);
+}
+

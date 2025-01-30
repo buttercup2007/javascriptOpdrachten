@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>galgje</title>
+</head>
+<body>
+  <div class="game-container">
+    <h1>galgje</h1>
+
+   
+    <div id="inputWordSection">
+      <label for="inputWord">Enter a Word:</label>
+      <input type="text" id="inputWord" maxlength="10" />
+      <button onclick="startGame()">Start Game</button>
+    </div>
+
+    <div id="gameSection" style="display: none;">
+      <div id="wordDisplay"></div>
+      <p>Wrong Guesses: <span id="wrongGuesses"></span></p>
+      <p>Remaining Attempts: <span id="remainingAttempts">1</span></p>
+      <input type="text" id="guessInput" maxlength="10" />
+      <button onclick="makeGuess()">Guess Letter</button>
+      <p id="message"></p>
+    </div>
+  </div>
+
+  <script src="galgje.js"></script>
+</body>
+</html>
