@@ -1,25 +1,17 @@
-//de gebruiker mag proberen om het 'te raden' getal te raden.
-//Het te raden getal mag gewoon een vast getal zijn dat in de code staat (hardcoded)
 
-//Een regel code is gegeven, hoe nu verder?
-let numberGuessed = prompt("Raad het getal (1 tot en met 10)");
-console.log(numberGuessed);
+let winningNumber = Math.floor(Math.random() * 10) + 1;
 
-let winningNumber = 4;
+let numberGuessed = parseInt(prompt("Guess the number (1 to 10):"));
 
 
-
-
-while(numberGuessed != winningNumber) {
-    if(numberGuessed > winningNumber ){
-        alert("You failed me...");
-        numberGuessed = prompt("Raad het getal (1 tot en met 10)");
+while (numberGuessed !== winningNumber) {
+    if (numberGuessed > winningNumber) {
+        alert("Too high! Try again.");
+    } else if (numberGuessed < winningNumber) {
+        alert("Too low! Try again.");
     }
     
-    else if(numberGuessed < winningNumber) {
-        alert("You failed me...");
-        numberGuessed = prompt("Raad het getal (1 tot en met 10)");
-    }
+    numberGuessed = parseInt(prompt("Guess the number (1 to 10):"));
 }
 
-    alert("You did it!")
+alert("You guessed it! The number was " + winningNumber + ".");
